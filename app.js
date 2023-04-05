@@ -1,5 +1,12 @@
-let scoope = 5;
-while (scoope > 0) {
-    console.log(`Code Run ${scoope}`);
-    scoope = scoope - 1;
-}
+const express = require('express');
+
+const app = express()
+
+app.get('/', (req, res) => {
+    res.status(200).json({
+        success: true,
+        message: "Server Running"
+    })
+})
+
+module.exports = app;
